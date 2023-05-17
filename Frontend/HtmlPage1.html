@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo List</title>
+    <link rel="stylesheet" type="text/css" href="StyleSheet1.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Todo List</h1>
+        <form action = "SaveServlet" method = "post">
+            
+            <input type="text" placeholder="Task name">
+            <input type="text" placeholder="Description">
+            <select>
+                <option value="not-started">Not Started</option>
+                <option value="in-progress">In Progress</option>
+                <option value="completed">Completed</option>
+            </select>
+            <input type="date" placeholder="Start date">
+            <input type="date" placeholder="Finish date">
+            <button type="submit">Add</button>
+        </form >
+        <ul class="todo-list">
+            <li>
+                <form action = "EditServlet"  method = "post" >
+                <div class="task-name">Example todo item</div>
+                <div class="description">This is an example todo item.</div>
+                <div class="status not-started">Not Started</div>
+                <div class="start-date">2023-04-27</div>
+                <div class="finish-date">2023-04-30</div>
+                <button class="edit-btn">Edit</button>
+                <button class="save-btn">Save</button>
+                <button class="cancel-btn">Cancel</button>
+                <button class="delete-btn">Delete</button>
+                 </form>
+            </li>
+             
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
